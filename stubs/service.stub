@@ -2,10 +2,17 @@
 
 namespace {{ namespace }};
 
+use App\Repositories\{{ RepositoryClass }};
+
 /**
  * Class DummyClass.
  */
 class DummyClass
 {
+    private {{ RepositoryClass }} ${{ repositoryVar }};
 
+    public function __construct({{ RepositoryClass }} ${{ repositoryVar }})
+    {
+        $this->{{ repositoryVar }} = ${{ repositoryVar }};
+    }
 }
