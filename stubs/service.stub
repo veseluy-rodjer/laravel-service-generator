@@ -10,7 +10,7 @@ use VeseluyRodjer\ServiceGenerator\Services\BaseService;
  */
 class DummyClass extends BaseService
 {
-    private {{ RepositoryClass }} $repository;
+    protected {{ RepositoryClass }} $repository;
 
     public function __construct({{ RepositoryClass }} $repository)
     {
