@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-use App\Repositories\{{ RepositoryClass }};
+use App\Repositories\Interfaces\{{ RepositoryClass }};
 use VeseluyRodjer\ServiceGenerator\Services\BaseService;
 
 /**

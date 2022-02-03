@@ -53,7 +53,7 @@ class MakeService extends GeneratorCommand
         $classname = \Str::replace('Repository', '', $this->getNameInput());
         $stub = \Str::replace('{{ Model }}', $classname, $stub);
         $stub = \Str::replace('{{ namespacedModel }}', 'App\Models\\' . $classname, $stub);
-        $repositoryClass = \Str::replace('Service', 'Repository', $classname);
+        $repositoryClass = \Str::replace('Service', 'RepositoryInterface', $classname);
         $repositoryVar = lcfirst($repositoryClass);
         $stub = \Str::replace('{{ RepositoryClass }}', $repositoryClass, $stub);
         $stub = \Str::replace('{{ repositoryVar }}', $repositoryVar, $stub);
