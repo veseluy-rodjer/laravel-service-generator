@@ -1,10 +1,10 @@
 <?php
 
-namespace TimWassenburg\ServiceGenerator\Http\Providers;
+namespace VeseluyRodjer\ServiceGenerator\Http\Providers;
 
 use Illuminate\Foundation\Providers\ArtisanServiceProvider;
-use TimWassenburg\ServiceGenerator\Console\MakeController;
-use TimWassenburg\ServiceGenerator\Console\MakeModel;
+use VeseluyRodjer\ServiceGenerator\Console\MakeController;
+use VeseluyRodjer\ServiceGenerator\Console\MakeModel;
 
 class CommandServiceProvider extends ArtisanServiceProvider
 {

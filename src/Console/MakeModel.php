@@ -1,6 +1,6 @@
 <?php
 
-namespace TimWassenburg\ServiceGenerator\Console;
+namespace VeseluyRodjer\ServiceGenerator\Console;
 
 use Illuminate\Foundation\Console\ModelMakeCommand;
 use Illuminate\Support\Str;

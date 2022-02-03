@@ -1,6 +1,6 @@
 <?php
 
-namespace TimWassenburg\ServiceGenerator\Console;
+namespace VeseluyRodjer\ServiceGenerator\Console;
 
 use Illuminate\Routing\Console\ControllerMakeCommand;
 use Illuminate\Support\Str;

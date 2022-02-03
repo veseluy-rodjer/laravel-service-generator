@@ -1,6 +1,6 @@
 <?php
 
-namespace TimWassenburg\ServiceGenerator\Services;
+namespace VeseluyRodjer\ServiceGenerator\Services;
 
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;

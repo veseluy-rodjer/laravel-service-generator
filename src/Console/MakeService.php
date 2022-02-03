@@ -1,6 +1,6 @@
 <?php
 
-namespace TimWassenburg\ServiceGenerator\Console;
+namespace VeseluyRodjer\ServiceGenerator\Console;
 
 use Illuminate\Console\GeneratorCommand;
 

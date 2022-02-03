@@ -1,10 +1,10 @@
 <?php
 
-namespace TimWassenburg\ServiceGenerator;
+namespace VeseluyRodjer\ServiceGenerator;
 
 use Illuminate\Support\ServiceProvider;
-use TimWassenburg\ServiceGenerator\Console\MakeModel;
-use TimWassenburg\ServiceGenerator\Console\MakeService;
+use VeseluyRodjer\ServiceGenerator\Console\MakeModel;
+use VeseluyRodjer\ServiceGenerator\Console\MakeService;
 
 class ServiceGeneratorServiceProvider extends ServiceProvider
 {
