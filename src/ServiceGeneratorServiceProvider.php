@@ -5,6 +5,7 @@ namespace VeseluyRodjer\ServiceGenerator;
 use Illuminate\Support\ServiceProvider;
 use VeseluyRodjer\ServiceGenerator\Console\MakeModel;
 use VeseluyRodjer\ServiceGenerator\Console\MakeService;
+use VeseluyRodjer\ServiceGenerator\Console\MakeController;
 
 class ServiceGeneratorServiceProvider extends ServiceProvider
 {

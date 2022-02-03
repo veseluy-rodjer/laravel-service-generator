@@ -3,11 +3,12 @@
 namespace {{ namespace }};
 
 use App\Repositories\{{ RepositoryClass }};
+use VeseluyRodjer\ServiceGenerator\Services\BaseService;
 
 /**
  * Class DummyClass.
  */
-class DummyClass
+class DummyClass extends BaseService
 {
     private {{ RepositoryClass }} $repository;
 
