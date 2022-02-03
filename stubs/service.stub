@@ -9,10 +9,10 @@ use App\Repositories\{{ RepositoryClass }};
  */
 class DummyClass
 {
-    private {{ RepositoryClass }} ${{ repositoryVar }};
+    private {{ RepositoryClass }} $repository;
 
-    public function __construct({{ RepositoryClass }} ${{ repositoryVar }})
+    public function __construct({{ RepositoryClass }} $repository)
     {
-        $this->{{ repositoryVar }} = ${{ repositoryVar }};
+        $this->repository = $repository;
     }
 }

@@ -14,7 +14,8 @@ class ServiceGeneratorServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 MakeService::class,
-                MakeModel::class
+                MakeModel::class,
+                MakeController::class,
             ]);
         }
     }
