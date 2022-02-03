@@ -24,16 +24,16 @@ class BaseService
 
     public function where($attr, $val): ?Collection
     {
-        return $this->repository->where($attr, $val)->get();
+        return $this->repository->where($attr, $val);
     }
 
     public function update(int $id, array $attributes): ?bool
     {
-        return $this->repository->findOrFail($id)->update($attributes);
+        return $this->repository->update($id, $attributes);
     }
 
     public function delete(int $id): ?bool
     {
-        return $this->repository->findOrFail($id)->delete();
+        return $this->repository->delete($id);
     }
 }
