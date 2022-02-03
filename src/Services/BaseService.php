@@ -5,10 +5,6 @@ namespace VeseluyRodjer\ServiceGenerator\Services;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class BaseService
- * @author yourname
- */
 class BaseService
 {
     public function all(): Collection

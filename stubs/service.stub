@@ -5,9 +5,6 @@ namespace {{ namespace }};
 use App\Repositories\Interfaces\{{ RepositoryClass }};
 use VeseluyRodjer\ServiceGenerator\Services\BaseService;
 
-/**
- * Class DummyClass.
- */
 class DummyClass extends BaseService
 {
     protected {{ RepositoryClass }} $repository;
