@@ -9,31 +9,31 @@ class BaseService
 {
     public function all(): Collection
     {
-        return $this->repository->all();
+        return $this->model->all();
     }
 
     public function create(array $attributes): Model
     {
-        return $this->repository->create($attributes);
+        return $this->model->create($attributes);
     }
 
-    public function findOrFail(int $id): ?Model
+    public function findOrFail(int $id): Model
     {
-        return $this->repository->findOrFail($id);
+        return $this->model->findOrFail($id);
     }
 
-    public function where($attr, $val): ?Collection
+    public function where(string $attr, string|int $val): Collection
     {
-        return $this->repository->where($attr, $val);
+        return $this->model->where($attr, $val)->get();
     }
 
-    public function update(int $id, array $attributes): ?bool
+    public function update(int $id, array $attributes): bool
     {
-        return $this->repository->update($id, $attributes);
+        return $this->findOrFail($id)->update($attributes);
     }
 
-    public function delete(int $id): ?bool
+    public function destroy(int $id): bool
     {
-        return $this->repository->delete($id);
+        return $this->model->destroy($id);
     }
 }
