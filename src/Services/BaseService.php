@@ -27,9 +27,9 @@ class BaseService
         return $this->repository->where($attr, $val);
     }
 
-    public function update(int $id, array $attributes): bool
+    public function update(array $attributes, int $id): bool
     {
-        return $this->repository->update($id, $attributes);
+        return $this->repository->update($attributes, $id);
     }
 
     public function destroy(int $id): bool
