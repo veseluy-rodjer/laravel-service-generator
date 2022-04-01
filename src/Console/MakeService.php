@@ -50,13 +50,11 @@ class MakeService extends GeneratorCommand
 
     protected function replaceNamespace(&$stub, $name)
     {
-        $classname = \Str::replace('Repository', '', $this->getNameInput());
-        $stub = \Str::replace('{{ Model }}', $classname, $stub);
-        $stub = \Str::replace('{{ namespacedModel }}', 'App\Models\\' . $classname, $stub);
-        $repositoryClass = \Str::replace('Service', 'RepositoryInterface', $classname);
-        $repositoryVar = lcfirst($repositoryClass);
-        $stub = \Str::replace('{{ RepositoryClass }}', $repositoryClass, $stub);
-        $stub = \Str::replace('{{ repositoryVar }}', $repositoryVar, $stub);
+        $dummyClass = str_replace($this->getNamespace($name).'\\', '', $name);
+        $repositoryInterface = str_replace('Service', 'RepositoryInterface', $dummyClass);
+        $pathRepositoryInterface = str_replace(['Service', '/'], ['RepositoryInterface', '\\'], $this->getNameInput());
+        $stub = \Str::replace('{{ RepositoryInterface }}', $repositoryInterface, $stub);
+        $stub = \Str::replace('{{ PathRepositoryInterface }}', $pathRepositoryInterface, $stub);
 
         return parent::replaceNamespace($stub, $name);
     }
