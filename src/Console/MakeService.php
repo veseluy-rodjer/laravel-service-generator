@@ -53,8 +53,9 @@ class MakeService extends GeneratorCommand
         $dummyClass = str_replace($this->getNamespace($name).'\\', '', $name);
         $repositoryInterface = str_replace('Service', 'RepositoryInterface', $dummyClass);
         $pathRepositoryInterface = str_replace(['Service', '/'], ['RepositoryInterface', '\\'], $this->getNameInput());
-        $stub = \Str::replace('{{ RepositoryInterface }}', $repositoryInterface, $stub);
-        $stub = \Str::replace('{{ PathRepositoryInterface }}', $pathRepositoryInterface, $stub);
+
+        $stub = str_replace('{{ RepositoryInterface }}', $repositoryInterface, $stub);
+        $stub = str_replace('{{ PathRepositoryInterface }}', $pathRepositoryInterface, $stub);
 
         return parent::replaceNamespace($stub, $name);
     }
