@@ -2,14 +2,14 @@
 
 namespace VeseluyRodjer\ServiceGenerator\Services;
 
-use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class BaseService
 {
-    public function all(): Collection
+    public function getAll(): Builder
     {
-        return $this->repository->all();
+        return $this->repository->getAll();
     }
 
     public function create(array $attributes): Model
@@ -22,7 +22,7 @@ class BaseService
         return $this->repository->findOrFail($id);
     }
 
-    public function where(string $attr, string|int $val): Collection
+    public function where(string $attr, string|int $val): Builder
     {
         return $this->repository->where($attr, $val);
     }
@@ -32,8 +32,8 @@ class BaseService
         return $this->repository->update($attributes, $id);
     }
 
-    public function destroy(int $id): bool
+    public function delete(int $id): bool
     {
-        return $this->repository->destroy($id);
+        return $this->repository->delete($id);
     }
 }
