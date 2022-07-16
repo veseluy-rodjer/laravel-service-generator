@@ -51,11 +51,11 @@ class MakeService extends GeneratorCommand
     protected function replaceNamespace(&$stub, $name)
     {
         $dummyClass = str_replace($this->getNamespace($name).'\\', '', $name);
-        $repositoryInterface = str_replace('Service', 'RepositoryInterface', $dummyClass);
-        $pathRepositoryInterface = str_replace(['Service', '/'], ['RepositoryInterface', '\\'], $this->getNameInput());
+        $repository = str_replace('Service', 'Repository', $dummyClass);
+        $pathRepository = str_replace(['Service', '/'], ['Repository', '\\'], $this->getNameInput());
 
-        $stub = str_replace('{{ RepositoryInterface }}', $repositoryInterface, $stub);
-        $stub = str_replace('{{ PathRepositoryInterface }}', $pathRepositoryInterface, $stub);
+        $stub = str_replace('{{ Repository }}', $repository, $stub);
+        $stub = str_replace('{{ PathRepository }}', $pathRepository, $stub);
 
         return parent::replaceNamespace($stub, $name);
     }
