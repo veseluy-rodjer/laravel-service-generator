@@ -36,4 +36,9 @@ class BaseService
     {
         return $this->repository->delete($id);
     }
+
+    public function statusFilter(int $status): Builder
+    {
+        return $this->repository->statusFilter($status);
+    }
 }
