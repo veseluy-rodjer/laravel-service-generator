@@ -17,14 +17,14 @@ class BaseService
         return $this->repository->create($attributes);
     }
 
-    public function findOrFail(int $id): Model
+    public function findModel(int $id): Builder
     {
-        return $this->repository->findOrFail($id);
+        return $this->repository->findModel($id);
     }
 
-    public function where(string $attr, string|int $val): Builder
+    public function filter(string $attr, string|int $val): Builder
     {
-        return $this->repository->where($attr, $val);
+        return $this->repository->filter($attr, $val);
     }
 
     public function update(array $attributes, int $id): bool
