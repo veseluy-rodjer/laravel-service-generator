@@ -41,4 +41,9 @@ class BaseService
     {
         return $this->repository->statusFilter($status);
     }
+
+    public function filterByCompare(string $attr, string $compare, string|int $val): Builder
+    {
+        return $this->repository->filterByCompare($attr, $compare, $val);
+    }
 }
