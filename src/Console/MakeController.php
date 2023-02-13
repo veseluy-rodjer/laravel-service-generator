@@ -41,7 +41,7 @@ class MakeController extends ControllerMakeCommand
     public function getOptions(): array
     {
         $options = parent::getOptions();
-        $options[] = ['service', 's', InputOption::VALUE_NONE, 'Generate a service for the controller'];
+        $options[] = ['service', 'S', InputOption::VALUE_NONE, 'Generate a service for the controller'];
 
         return $options;
     }
