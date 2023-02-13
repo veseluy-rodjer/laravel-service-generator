@@ -3,11 +3,11 @@
 namespace VeseluyRodjer\ServiceGenerator\Services;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Builder;;
 
 class BaseService
 {
-    public function getAll(): Collection
+    public function getAll(): Builder
     {
         return $this->repository->getAll();
     }
@@ -22,7 +22,7 @@ class BaseService
         return $this->repository->findModel($id);
     }
 
-    public function filter(string $attr, string|int $val): Collection
+    public function filter(string $attr, string|int $val): Builder
     {
         return $this->repository->filter($attr, $val);
     }
@@ -37,12 +37,12 @@ class BaseService
         return $this->repository->delete($id);
     }
 
-    public function statusFilter(int $status): Collection
+    public function statusFilter(int $status): Builder
     {
         return $this->repository->statusFilter($status);
     }
 
-    public function filterByCompare(string $attr, string $compare, string|int $val): Collection
+    public function filterByCompare(string $attr, string $compare, string|int $val): Builder
     {
         return $this->repository->filterByCompare($attr, $compare, $val);
     }
