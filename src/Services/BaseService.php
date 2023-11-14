@@ -32,12 +32,12 @@ class BaseService
         return $this->repository->filterIn($attr, $data);
     }
 
-    public function modelWith(string $relationship, int $id): Builder
+    public function modelWith(string|array $relationship, int $id): Builder
     {
         return $this->repository->modelWith($relationship, $id);
     }
 
-    public function allWith(string $relationship): Builder
+    public function allWith(string|array $relationship): Builder
     {
         return $this->repository->allWith($relationship);
     }
